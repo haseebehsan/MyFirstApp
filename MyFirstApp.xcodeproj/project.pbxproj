@@ -14,6 +14,11 @@
 		37E43DF71B623DEC00D094BA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37E43DF51B623DEC00D094BA /* LaunchScreen.xib */; };
 		37E43E031B623DEC00D094BA /* MyFirstAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E43E021B623DEC00D094BA /* MyFirstAppTests.swift */; };
 		37E43E0D1B623FE400D094BA /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E43E0C1B623FE400D094BA /* Firebase.framework */; };
+		37E43E0F1B6242C300D094BA /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E43E0E1B6242C300D094BA /* libc++.dylib */; };
+		37E43E111B6242F200D094BA /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E43E101B6242F200D094BA /* libicucore.dylib */; };
+		37E43E131B62430C00D094BA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E43E121B62430C00D094BA /* SystemConfiguration.framework */; };
+		37E43E151B62432B00D094BA /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E43E141B62432B00D094BA /* CFNetwork.framework */; };
+		37E43E171B62433A00D094BA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37E43E161B62433A00D094BA /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		37E43E011B623DEC00D094BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37E43E021B623DEC00D094BA /* MyFirstAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFirstAppTests.swift; sourceTree = "<group>"; };
 		37E43E0C1B623FE400D094BA /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
+		37E43E0E1B6242C300D094BA /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		37E43E101B6242F200D094BA /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		37E43E121B62430C00D094BA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		37E43E141B62432B00D094BA /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		37E43E161B62433A00D094BA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37E43E171B62433A00D094BA /* Security.framework in Frameworks */,
+				37E43E151B62432B00D094BA /* CFNetwork.framework in Frameworks */,
+				37E43E131B62430C00D094BA /* SystemConfiguration.framework in Frameworks */,
+				37E43E111B6242F200D094BA /* libicucore.dylib in Frameworks */,
+				37E43E0F1B6242C300D094BA /* libc++.dylib in Frameworks */,
 				37E43E0D1B623FE400D094BA /* Firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +77,11 @@
 		37E43DDE1B623DEC00D094BA = {
 			isa = PBXGroup;
 			children = (
+				37E43E161B62433A00D094BA /* Security.framework */,
+				37E43E141B62432B00D094BA /* CFNetwork.framework */,
+				37E43E121B62430C00D094BA /* SystemConfiguration.framework */,
+				37E43E101B6242F200D094BA /* libicucore.dylib */,
+				37E43E0E1B6242C300D094BA /* libc++.dylib */,
 				37E43DE91B623DEC00D094BA /* MyFirstApp */,
 				37E43DFF1B623DEC00D094BA /* MyFirstAppTests */,
 				37E43DE81B623DEC00D094BA /* Products */,
@@ -350,6 +370,7 @@
 				);
 				INFOPLIST_FILE = MyFirstApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -364,6 +385,7 @@
 				);
 				INFOPLIST_FILE = MyFirstApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
